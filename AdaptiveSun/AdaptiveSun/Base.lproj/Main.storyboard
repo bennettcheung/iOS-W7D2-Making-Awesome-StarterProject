@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,10 +31,10 @@
                                 <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5r-4M-Go7" userLabel="Label View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="167.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="d72-t1-0ra">
-                                                <rect key="frame" x="8" y="0.0" width="359" height="167.5"/>
+                                                <rect key="frame" x="8" y="0.0" width="359" height="167"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="400"/>
                                                 <nil key="textColor"/>
@@ -48,13 +49,48 @@
                                             <constraint firstItem="d72-t1-0ra" firstAttribute="top" secondItem="c5r-4M-Go7" secondAttribute="top" id="hr2-qG-Gi0"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rp1-gD-CFp" userLabel="Button View">
+                                        <rect key="frame" x="0.0" y="173" width="375" height="161"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6id-lU-7Nd" userLabel="Play">
+                                                <rect key="frame" x="135" y="28" width="105" height="105"/>
+                                                <state key="normal" backgroundImage="Play"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Heu-sj-pOB" userLabel="Forward">
+                                                <rect key="frame" x="262" y="28.5" width="105" height="105"/>
+                                                <state key="normal" backgroundImage="Forward"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hot-EX-Vdu" userLabel="Backward">
+                                                <rect key="frame" x="8" y="28.5" width="105" height="105"/>
+                                                <state key="normal" backgroundImage="Backward"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Hot-EX-Vdu" firstAttribute="width" secondItem="rp1-gD-CFp" secondAttribute="height" constant="-56" id="3L1-TQ-ios"/>
+                                            <constraint firstItem="6id-lU-7Nd" firstAttribute="centerX" secondItem="rp1-gD-CFp" secondAttribute="centerX" id="3SQ-IG-wmv"/>
+                                            <constraint firstItem="Heu-sj-pOB" firstAttribute="width" secondItem="Hot-EX-Vdu" secondAttribute="width" id="4nR-Mn-0Q7"/>
+                                            <constraint firstItem="Hot-EX-Vdu" firstAttribute="leading" secondItem="rp1-gD-CFp" secondAttribute="leading" constant="8" id="8MR-82-yjZ"/>
+                                            <constraint firstItem="Heu-sj-pOB" firstAttribute="height" secondItem="Hot-EX-Vdu" secondAttribute="height" id="Bf8-WS-f9w"/>
+                                            <constraint firstItem="Heu-sj-pOB" firstAttribute="centerY" secondItem="rp1-gD-CFp" secondAttribute="centerY" id="GCj-W8-s6m"/>
+                                            <constraint firstAttribute="trailing" secondItem="Heu-sj-pOB" secondAttribute="trailing" constant="8" id="Rc6-pq-rLy"/>
+                                            <constraint firstItem="6id-lU-7Nd" firstAttribute="width" secondItem="Hot-EX-Vdu" secondAttribute="width" id="XjC-Pr-dj8"/>
+                                            <constraint firstItem="6id-lU-7Nd" firstAttribute="height" secondItem="Hot-EX-Vdu" secondAttribute="height" id="d5x-Aw-7kU"/>
+                                            <constraint firstItem="Hot-EX-Vdu" firstAttribute="height" secondItem="rp1-gD-CFp" secondAttribute="height" constant="-56" id="fsG-rR-z49"/>
+                                            <constraint firstItem="6id-lU-7Nd" firstAttribute="centerY" secondItem="rp1-gD-CFp" secondAttribute="centerY" id="u8N-1g-tVW"/>
+                                            <constraint firstItem="Hot-EX-Vdu" firstAttribute="centerY" secondItem="rp1-gD-CFp" secondAttribute="centerY" id="yQV-6n-9Lo"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="c5r-4M-Go7" firstAttribute="top" secondItem="zSb-o3-eji" secondAttribute="top" id="2gq-Hf-7v2"/>
                                     <constraint firstItem="c5r-4M-Go7" firstAttribute="height" secondItem="zSb-o3-eji" secondAttribute="height" multiplier="0.5" id="5Db-rN-Pza"/>
+                                    <constraint firstAttribute="bottom" secondItem="rp1-gD-CFp" secondAttribute="bottom" id="7FZ-I1-dT9"/>
                                     <constraint firstAttribute="trailing" secondItem="c5r-4M-Go7" secondAttribute="trailing" id="K6M-4G-dN0"/>
+                                    <constraint firstAttribute="trailing" secondItem="rp1-gD-CFp" secondAttribute="trailing" id="TY3-an-9UT"/>
                                     <constraint firstItem="c5r-4M-Go7" firstAttribute="leading" secondItem="zSb-o3-eji" secondAttribute="leading" id="TmK-I1-NxS"/>
+                                    <constraint firstItem="rp1-gD-CFp" firstAttribute="leading" secondItem="zSb-o3-eji" secondAttribute="leading" id="bMn-GC-9EX"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayf-70-75F" userLabel="Top View">
@@ -78,6 +114,7 @@
                             <constraint firstItem="ayf-70-75F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4hg-Pl-8xg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zSb-o3-eji" secondAttribute="bottom" id="AfE-Dp-sZc"/>
                             <constraint firstItem="ayf-70-75F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AyM-Vs-2NZ"/>
+                            <constraint firstItem="rp1-gD-CFp" firstAttribute="height" secondItem="gyc-4m-8zh" secondAttribute="height" multiplier="0.25" id="ND4-FU-ziP"/>
                             <constraint firstItem="gyc-4m-8zh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RBi-1z-8WF"/>
                             <constraint firstAttribute="trailing" secondItem="ayf-70-75F" secondAttribute="trailing" id="V1R-dx-LfR"/>
                             <constraint firstItem="zSb-o3-eji" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Zf2-NV-4U5"/>
@@ -92,10 +129,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Backward" width="69" height="69"/>
+        <image name="Forward" width="69" height="69"/>
+        <image name="Play" width="69" height="69"/>
         <image name="Sun" width="518" height="505"/>
         <image name="background" width="1280" height="480"/>
     </resources>
